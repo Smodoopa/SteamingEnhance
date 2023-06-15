@@ -20,6 +20,6 @@ header {
     padding-right: 0;
     padding-left: 0;
 }
-.watch-page .item:nth-of-type(2) {
+body > div.wrapper > main > div.watch > div.container.watch-page {
     max-width: 75%;
 }
