@@ -1,0 +1,12 @@
+header {
+    background: #141414;
+}
+#player-wrapper {
+    padding: 0 !important;
+    height: calc(100% - 48px) !important;
+}
+.container.watch-page {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
