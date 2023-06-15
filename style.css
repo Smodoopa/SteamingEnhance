@@ -1,5 +1,6 @@
 header {
     background: #141414;
+    position: absolute;
 }
 #player-wrapper {
     padding: 0 !important;
@@ -9,4 +10,7 @@ header {
     max-width: 100%;
     padding-right: 0;
     padding-left: 0;
+}
+.container.watch-page:nth-of-type(2) {
+    max-width: 75%;
 }

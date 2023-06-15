@@ -10,25 +10,24 @@
 // @require      E:\Code\TamperMonkey\fMovies\js\startup.js
 // @grant        GM_getResourceText
 // @grant        GM_addStyle
-// @resource     IMPORTED_CSS https://raw.githubusercontent.com/Smodoopa/Soap2day-Enhanced/main/style.css
+// @resource     IMPORTED_CSS https://raw.githubusercontent.com/Smodoopa/SteamingEnhance/main/style.css
 // ==/UserScript==
 
 (function () {
+    GM_addStyle(my_css);
+
     console.log("hi");
+
     setTimeout(() => {
         startUp();
     }, 5000);
     
 })();
 
-GM_addStyle(my_css);
-
-
 
 
 function startUp() {
     console.log("SteamEnhance activated.");
-
     $('.btn-watchnow').click();
 
     setTimeout(() => {
