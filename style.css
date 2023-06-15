@@ -1,7 +1,16 @@
 header {
     background: #141414;
     position: absolute;
+    opacity: 0;
 }
+header {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  header:hover {
+    opacity: 1;
+  }
 #player-wrapper {
     padding: 0 !important;
     height: calc(100% - 48px) !important;
