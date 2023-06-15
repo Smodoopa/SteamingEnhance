@@ -1,5 +1,5 @@
 header {
-    background: #141414;
+    background: #0c0c0c9e;
     position: absolute;
     opacity: 0;
 }
@@ -19,4 +19,7 @@ header {
     max-width: 100%;
     padding-right: 0;
     padding-left: 0;
+}
+.watch-page .item:nth-of-type(2) {
+    max-width: 75%;
 }
