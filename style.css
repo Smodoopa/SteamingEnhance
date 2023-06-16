@@ -25,3 +25,10 @@ header:hover {
 body > div.wrapper > main > div.watch > div.container.watch-page {
     max-width: 75% !important;
 }
+#player {
+    height: calc(100% + 42px);
+}
+#controls {
+    margin-top: 50px;
+    margin-bottom: 8px;
+}
