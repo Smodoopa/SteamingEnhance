@@ -26,7 +26,7 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     max-width: 75% !important;
 }
 #player {
-    height: calc(100vh + 42px) !important;
+    height: 100vh !important;
 }
 #controls {
     margin-top: 50px;
