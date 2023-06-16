@@ -15,7 +15,7 @@ header:hover {
 
 #player-wrapper {
     padding: 0 !important;
-    height: calc(100% - 48px) !important;
+    height: 100% !important;
 }
 .container.watch-page {
     max-width: 100%;
