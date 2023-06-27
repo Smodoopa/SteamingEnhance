@@ -47,6 +47,7 @@ const loadQueueModal = () => {
         $("#user > div").append('<div class="seQueue"><button data-toggle="dropdown" data-placeholder="false"><i class="bi bi-list-ul"></i> </button></div>');
 
         $('.seQueue').click(() => displayQueueModal());
+        $('#close-btn').click(() => closeQueueModal());
 }
 
 const addToQueue = url => {
