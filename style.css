@@ -33,9 +33,6 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     margin-bottom: 8px;
 }
 
-
-
-
 /* Queue Modal */
 .queue-modal {
     width: 100%;
@@ -43,7 +40,7 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     position: fixed;
     height: 100%;
     background-color: #000000f0;
-    z-index: 1;
+    z-index: 999999;
     display: none;
     align-content: center;
     flex-wrap: nowrap;
@@ -158,4 +155,10 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     border-bottom-left-radius: 0px;
     height: 28px;
     background-color: #565656;
+}
+.seQueue {
+    border-right: 2px solid rgba(15,15,15,.3);
+    background: #00b3c9;
+    height: 3rem;
+    transition: background .4s;
 }
