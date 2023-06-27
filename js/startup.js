@@ -32,6 +32,7 @@ const queueHeaderBtn = '<div class="seQueue"><button data-toggle="dropdown" data
 
 const queueInit = () => {
     loadQueue();
+    loadQueueModal();
 }
 
 const loadQueue = () => {
