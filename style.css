@@ -32,3 +32,130 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     margin-top: 50px;
     margin-bottom: 8px;
 }
+
+
+
+
+/* Queue Modal */
+.queue-modal {
+    width: 100%;
+    top: 0px;
+    position: fixed;
+    height: 100%;
+    background-color: #000000f0;
+    z-index: 1;
+    display: none;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.queue-modal-content {
+    user-select: none;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    display: flex;
+    align-content: center;
+    width: 37em;
+    align-items: center;
+}
+.queue-details {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: space-between;
+}
+.server-header {
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #121212;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.server-header-btn {
+    padding: 20px;
+    flex: 0 1 auto;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.4s ease;
+}
+.server-header-btn:hover {
+    background-color: #2c2c2c8c;
+    border-radius: 40px;
+}
+.header-text {
+    flex: 1 1 auto;
+    margin-left: 40px;
+}
+.header-text-fav {
+    margin-left: 0 !important;
+}
+.server-header-btn {
+    padding: 20px;
+    flex: 0 1 auto;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.4s ease;
+}
+.server-header-btn:hover {
+    background-color: #2c2c2c8c;
+    border-radius: 40px;
+}
+.queue-table {
+    background-color: #171717;
+    width: 100%;
+    border-top: 1px #4141417d solid;
+    height: 389px;
+    overflow-y: scroll;
+    display: table-column;
+}
+.queue-button-panel {
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: #121212;
+    height: 50px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#btnFavAdd {
+    margin-left: auto;
+    background-color: #2f2f2f;
+}
+.btn-info {
+    color: #fff;
+    width: 50px;
+    height: 45px !important;
+    border: none;
+    border-radius: 0;
+    background-color: #000000 !important;
+    border-radius: 10px;
+    display: none !important;
+}
+.btn-primary {
+    background-color: #3f3f3fa8;
+    border-radius: 23px;
+}
+.btn-success {
+    background-color: #7a00ff;
+}
+.quickAddSubmit {
+    margin-left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    height: 28px;
+    background-color: #565656;
+}
