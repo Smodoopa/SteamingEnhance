@@ -79,7 +79,7 @@ const addToQueue = (url, title) => {
 }
 
 const displayQueueModal = () => {
-    //loadQueueItems();
+    loadQueueItems();
     $('.queue-modal').css('display', 'flex');
     $('body').toggleClass('noscroll');
 }
@@ -155,4 +155,8 @@ const observer = new MutationObserver(function(mutationsList) {
   const reloadQueueItems = () => {
     unloadQueueItems();
     loadQueueItems();
+}
+
+const unloadQueueItems = () => {
+    $('.queue-table tbody tr:not(:first)').remove();
 }
