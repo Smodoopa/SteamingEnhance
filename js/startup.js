@@ -16,7 +16,6 @@ function startUp() {
     console.log("SteamEnhance activated.");
 
     queueInit();
-    initAutoPlay();
 
     window.scrollTo(0, 0);
     $('.jw-icon-fullscreen').click();
@@ -48,6 +47,7 @@ const queueInit = () => {
             $('#queueMedia').click(() => {
                 const mediaUrl = $('#queueMedia').attr('mediaUrl');
                 const mediaTitle = $('#queueMedia').attr('mediaTitle');
+                console.log(mediaTitle);
                 addToQueue(mediaUrl, mediaTitle);
             });
       });
