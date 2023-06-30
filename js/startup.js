@@ -46,8 +46,8 @@ const queueInit = () => {
       $(tooltipElement).find('.add2list').click(() => {
             $(tooltipElement).find('div.tooltipster-box > div > div.info > div.head > div.start.d-flex > div.dropdown.user-bookmark > div').append('<a id="queueMedia" class="dropdown-item" mediaUrl="' + mediaUrl + '" mediaTitle="' + mediaTitle + '">Queue</a>');
             $('#queueMedia').click(() => {
-                const mediaUrl = $(this).attr('mediaUrl');
-                const mediaTitle = $(this).attr('mediaTitle');
+                const mediaUrl = $('#queueMedia').attr('mediaUrl');
+                const mediaTitle = $('#queueMedia').attr('mediaTitle');
                 addToQueue(mediaUrl, mediaTitle);
             });
       });
