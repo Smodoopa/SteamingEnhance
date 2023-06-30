@@ -61,7 +61,6 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    width: 100%;
     align-content: space-between;
 }
 .server-header {

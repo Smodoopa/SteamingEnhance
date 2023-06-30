@@ -54,7 +54,7 @@ const queueInit = () => {
 const loadQueue = () => {
     if (!localStorage.getItem('myQueue')) localStorage.setItem('myQueue', '[]');
 }
-
+<i class="bi bi-x-lg"></i>
 const loadQueueModal = () => {
         //Add Queue Modal to Site Nav Header
         $('body').prepend('<div class="queue-modal"><div class="queue-modal-content"><div class="queue-details"><div class="server-header"><h3 class="header-text">My Queue</h3><div id="close-btn" class="server-header-btn"><i class="bi bi-x-lg"></i></div></div><table class="queue-table"><tbody><tr class="queue-table-headers"><th>Order</th><th>Name</th></tr></tbody></table><div class="queue-button-panel"><div id="btnFav" class="btn btn-primary"><i class="fa fa-star" aria-hidden="true"></i></div><div id="btnQueueClear" class="btn btn-primary"><i class="fa fa-trash" aria-hidden="true"></i></div><div id="btnShuffleQueue" class="btn btn-primary"><i class="fa fa-random" aria-hidden="true"></i></div><input class="quickAddInput" placeholder="Quick Add"><div class="btn btn-primary quickAddSubmit"><i class="fa fa-search" aria-hidden="true"></i></div></div></div></div></div>');
@@ -93,9 +93,9 @@ const loadQueueItems = () => {
 
     queue.forEach((item, index) => {
         if (index == 0) {
-            $('.queue-table tr:last').after(`<tr style="background: #a3a3a340;"><td>${index + 1}</td><td class="queueTableRowData"><a href="${item[1]}">${item[0]}</a><div class="upNextLabel">Up Next</div><div id="btnQueueDown" class="btnQueueTable"><i class="fa fa-caret-down" aria-hidden="true"></i></div><div id="btnQueueUp" class="btnQueueTable"><i class="fa fa-caret-up" aria-hidden="true"></i></div><div id="btnQueueDelete" class="btnQueueTable"><i class="fa fa-times" aria-hidden="true"></i></div></td></tr>`);
+            $('.queue-table tr:last').after(`<tr style="background: #a3a3a340;"><td>${index + 1}</td><td class="queueTableRowData"><a href="${item[1]}">${item[0]}</a><div class="upNextLabel">Up Next</div><div id="btnQueueDown" class="btnQueueTable"><i class="bi bi-chevron-down"></i></div><div id="btnQueueUp" class="btnQueueTable"><i class="bi bi-chevron-up"></i></div><div id="btnQueueDelete" class="btnQueueTable"><i class="fa fa-times" aria-hidden="true"></i></div></td></tr>`);
         } else {
-            $('.queue-table tr:last').after(`<tr><td>${index + 1}</td><td class="queueTableRowData"><a href="${item[1]}">${item[0]}</a><div id="btnQueueDown" class="btnQueueTable"><i class="fa fa-caret-down" aria-hidden="true"></i></div><div id="btnQueueUp" class="btnQueueTable"><i class="fa fa-caret-up" aria-hidden="true"></i></div><div id="btnQueueDelete" class="btnQueueTable"><i class="fa fa-times" aria-hidden="true"></i></div></td></tr>`);
+            $('.queue-table tr:last').after(`<tr><td>${index + 1}</td><td class="queueTableRowData"><a href="${item[1]}">${item[0]}</a><div id="btnQueueDown" class="btnQueueTable"><i class="bi bi-chevron-down"></i></div><div id="btnQueueUp" class="btnQueueTable"><i class="bi bi-chevron-up"></i></div><div id="btnQueueDelete" class="btnQueueTable"><i class="bi bi-x-lg"></i></div></td></tr>`);
         }
     });
 
