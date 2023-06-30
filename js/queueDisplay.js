@@ -38,7 +38,6 @@ const addToQueue = url => {
 
 const displayQueueModal = () => {
     //loadQueueItems();
-    //$('#btnFav').click(e => { loadFavoritesList() });
     $('.queue-modal').css('display', 'flex');
     $('body').toggleClass('noscroll');
 }
