@@ -2,6 +2,18 @@ const queueHeaderBtn = '<div class="seQueue"><button data-toggle="dropdown" data
 
 const queueInit = () => {
     loadQueue();
+
+    observer.observe(document, { childList: true, subtree: true });
+  
+    document.addEventListener('tooltipsterElementCreated', function(event) {
+      const tooltipElement = event.detail;
+    
+      const mediaUrl = 'https://fmovies.wtf/' + $(tooltipElement).find('div.tooltipster-box > div > div.action > a').attr('href');
+    
+      $(tooltipElement).find('.add2list').click(() => {
+                  $(tooltipElement).find('div.tooltipster-box > div > div.info > div.head > div.start.d-flex > div.dropdown.user-bookmark > div').append('<a class="dropdown-item" href="#" data-id="4">Queue</a>');
+      });
+    });
 }
 
 const loadQueue = () => {
@@ -36,3 +48,17 @@ const closeQueueModal = () => {
     $('.queue-table').html('<tbody><tr class="queue-table-headers"><th>Order</th><th>Name</th></tr></tbody>');
     $('body').toggleClass('noscroll');
 }
+
+
+const observer = new MutationObserver(function(mutationsList) {
+    for (let mutation of mutationsList) {
+      if (mutation.type === 'childList') {
+        for (let node of mutation.addedNodes) {
+          if (node.nodeType === Node.ELEMENT_NODE && node.classList.contains('tooltipster-base')) {
+            const event = new CustomEvent('tooltipsterElementCreated', { detail: node });
+            document.dispatchEvent(event);
+          }
+        }
+      }
+    }
+  });

@@ -161,4 +161,6 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     background: #00b3c9;
     height: 3rem;
     transition: background .4s;
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
 }
