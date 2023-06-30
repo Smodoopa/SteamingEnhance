@@ -164,3 +164,95 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     border-top-left-radius: 3em;
     border-bottom-left-radius: 3em;
 }
+#btnQueueClear {
+    margin-left: 10px;
+}
+#btnQueueClear:hover {
+    background-color: #762824;
+}
+#btnQueueDown {
+    margin-left: auto;
+    background-color: #000000e0;
+}
+#btnQueueUp {
+    margin-left: 6px;
+    background-color: #000000e0;
+}
+.btnQueueTable img {
+    width: 15px;
+    height: 15px;
+    pointer-events: none; 
+}
+.btnQueueTable {
+    width: 30px;
+    height: 30px;
+    align-self: flex-end;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#btnQueueDelete {
+    background-color: #e33e3e;
+    margin-left: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.upNextLabel {
+    background-color: #efff01;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: black;
+}
+.queueTableRowData {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.queueTableRowData a {
+    max-width: 318px;
+}
+tr {
+    line-height: 8px;
+    font-size: 13px;
+    border-bottom: 1px solid #b7b7b71c;
+    cursor: pointer;
+}
+tr:not(:first-child):hover {
+    background-color: #8080800f;
+}
+th {
+    text-align: left;
+    padding: 8px;
+    text-shadow: black 0px 0px 10px;
+    width: 35em;
+}
+td {
+    text-align: left;
+    padding: 10px;
+    text-shadow: black 0px 0px 10px;
+    line-height: 20px;
+}
+tr:first-child {
+    height: 45px;
+    background: #121212;
+}
+td:first-child {
+    text-align: center;
+    width: auto;
+}
+th:first-child {
+    width: 1em;
+    text-align: center;
+}
+.blurred {
+    filter: blur(5px);
+}
+.noscroll {
+    overflow: hidden;
+}
