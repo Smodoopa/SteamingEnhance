@@ -71,7 +71,7 @@ const loadQueueModal = () => {
 const addToQueue = (url, title) => {
     var myQueue = JSON.parse(localStorage.getItem('myQueue'));
 
-    myQueue.push([url, title]);
+    myQueue.push([title, url]);
 
     localStorage.setItem("myQueue", JSON.stringify(myQueue));
     console.log('Added ' + title + ' to your queue. Link: ' + url);
@@ -90,6 +90,55 @@ const closeQueueModal = () => {
     $('body').toggleClass('noscroll');
 }
 
+const loadQueueItems = () => {
+    var queue = JSON.parse(localStorage.getItem('myQueue'));
+
+    queue.forEach((item, index) => {
+        if (index == 0) {
+            $('.queue-table tr:last').after(`<tr style="background: #a3a3a340;"><td>${index + 1}</td><td class="queueTableRowData"><a href="${item[1]}">${item[0]}</a><div class="upNextLabel">Up Next</div><div id="btnQueueDown" class="btnQueueTable"><i class="fa fa-caret-down" aria-hidden="true"></i></div><div id="btnQueueUp" class="btnQueueTable"><i class="fa fa-caret-up" aria-hidden="true"></i></div><div id="btnQueueDelete" class="btnQueueTable"><i class="fa fa-times" aria-hidden="true"></i></div></td></tr>`);
+        } else {
+            $('.queue-table tr:last').after(`<tr><td>${index + 1}</td><td class="queueTableRowData"><a href="${item[1]}">${item[0]}</a><div id="btnQueueDown" class="btnQueueTable"><i class="fa fa-caret-down" aria-hidden="true"></i></div><div id="btnQueueUp" class="btnQueueTable"><i class="fa fa-caret-up" aria-hidden="true"></i></div><div id="btnQueueDelete" class="btnQueueTable"><i class="fa fa-times" aria-hidden="true"></i></div></td></tr>`);
+        }
+    });
+
+    $('.queueTableRowData > #btnQueueDelete').click(e => {
+        var myQueue = JSON.parse(localStorage.getItem('myQueue'));
+        myQueue.splice($(e.target.parentElement.parentElement).index() - 1, 1);
+        localStorage.setItem("myQueue", JSON.stringify(myQueue));
+        reloadQueueItems();
+    });
+
+    $('.queueTableRowData > #btnQueueUp').click(e => {
+        var myQueue = JSON.parse(localStorage.getItem('myQueue')),
+            rowToMove = $(e.target.parentElement.parentElement).index() - 1;
+
+        if (rowToMove == 0) return;
+
+        let movedRowDataTemp = myQueue[rowToMove];
+        myQueue[rowToMove] = myQueue[rowToMove - 1];
+        myQueue[rowToMove - 1] = movedRowDataTemp;
+
+        localStorage.setItem("myQueue", JSON.stringify(myQueue));
+
+        reloadQueueItems();
+    });
+
+    $('.queueTableRowData > #btnQueueDown').click(e => {
+        var myQueue = JSON.parse(localStorage.getItem('myQueue')),
+            rowToMove = $(e.target.parentElement.parentElement).index() - 1;
+
+        if (rowToMove == (myQueue.length - 1)) return;
+
+        let movedRowDataTemp = myQueue[rowToMove];
+        myQueue[rowToMove] = myQueue[rowToMove + 1];
+        myQueue[rowToMove + 1] = movedRowDataTemp;
+
+        localStorage.setItem("myQueue", JSON.stringify(myQueue));
+
+        reloadQueueItems();
+    });
+}
+
 const observer = new MutationObserver(function(mutationsList) {
     for (let mutation of mutationsList) {
       if (mutation.type === 'childList') {
@@ -102,3 +151,8 @@ const observer = new MutationObserver(function(mutationsList) {
       }
     }
   });
+
+  const reloadQueueItems = () => {
+    unloadQueueItems();
+    loadQueueItems();
+}
