@@ -41,9 +41,10 @@ const queueInit = () => {
       const tooltipElement = event.detail;
     
       const mediaUrl = 'https://fmovies.wtf/' + $(tooltipElement).find('div.tooltipster-box > div > div.action > a').attr('href');
+      const mediaTitle = $('.tooltipster-base').find('div.info > div.head > div.start.d-flex > div.name').text();
     
       $(tooltipElement).find('.add2list').click(() => {
-                  $(tooltipElement).find('div.tooltipster-box > div > div.info > div.head > div.start.d-flex > div.dropdown.user-bookmark > div').append('<a class="dropdown-item" href="#" data-id="4">Queue</a>');
+            $(tooltipElement).find('div.tooltipster-box > div > div.info > div.head > div.start.d-flex > div.dropdown.user-bookmark > div').append('<a onclick="addToQueue()" class="dropdown-item" mediaUrl="' + mediaUrl + '" mediaTitle="' + mediaTitle + '">Queue</a>');
       });
     });
 }
