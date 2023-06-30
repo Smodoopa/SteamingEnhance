@@ -21,9 +21,6 @@ function startUp() {
     $('.jw-icon-fullscreen').click();
 }
 
-
-
-
 /*-----------------------------------------------------------------*/
 /*-----------------------------QUEUE-------------------------------*/
 /*-----------------------------------------------------------------*/
@@ -80,6 +77,7 @@ const addToQueue = (url, title) => {
 
 const displayQueueModal = () => {
     loadQueueItems();
+    console.log("Display queue modal.");
     $('.queue-modal').css('display', 'flex');
     $('body').toggleClass('noscroll');
 }
