@@ -44,7 +44,12 @@ const queueInit = () => {
       const mediaTitle = $('.tooltipster-base').find('div.info > div.head > div.start.d-flex > div.name').text();
     
       $(tooltipElement).find('.add2list').click(() => {
-            $(tooltipElement).find('div.tooltipster-box > div > div.info > div.head > div.start.d-flex > div.dropdown.user-bookmark > div').append('<a onclick="addToQueue()" class="dropdown-item" mediaUrl="' + mediaUrl + '" mediaTitle="' + mediaTitle + '">Queue</a>');
+            $(tooltipElement).find('div.tooltipster-box > div > div.info > div.head > div.start.d-flex > div.dropdown.user-bookmark > div').append('<a id="queueMedia" class="dropdown-item" mediaUrl="' + mediaUrl + '" mediaTitle="' + mediaTitle + '">Queue</a>');
+            $('#queueMedia').click(() => {
+                const mediaUrl = $(this).attr('mediaUrl');
+                const mediaTitle = $(this).attr('mediaTitle');
+                addToQueue(mediaUrl, mediaTitle);
+            });
       });
     });
 }
@@ -63,12 +68,13 @@ const loadQueueModal = () => {
         $('#close-btn').click(() => closeQueueModal());
 }
 
-const addToQueue = url => {
-    //var myQueue = JSON.parse(localStorage.getItem('myQueue'));
+const addToQueue = (url, title) => {
+    var myQueue = JSON.parse(localStorage.getItem('myQueue'));
 
-    //myQueue.push([text, url]);
+    myQueue.push([url, title]);
 
-    //localStorage.setItem("myQueue", JSON.stringify(myQueue));
+    localStorage.setItem("myQueue", JSON.stringify(myQueue));
+    console.log('Added ' + title + ' to your queue. Link: ' + url);
     //triggerNoticiation(`${text} successfully added to your queue!`);
 }
 
