@@ -49,7 +49,7 @@ const queueInit = () => {
             });
       });
     });
-    waitForPlayer();
+    waitForPlayer;
 }
 
 const waitForPlayer = setInterval(() => {
