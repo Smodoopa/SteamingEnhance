@@ -163,6 +163,10 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     border-top-left-radius: 3em;
     border-bottom-left-radius: 3em;
 }
+.seQueue {
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
+}
 #btnQueueClear {
     margin-left: 10px;
 }
@@ -208,7 +212,7 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     justify-content: center;
 }
 #btnQueueDelete:hover {
-    background-color: #59555f;
+    background-color: #711a1a;
 }
 .upNextLabel {
     border-radius: 50rem!important;
