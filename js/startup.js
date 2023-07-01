@@ -93,7 +93,7 @@ const loadQueueItems = () => {
 
     queue.forEach((item, index) => {
         if (index == 0) {
-            $('.queue-table tr:last').after(`<tr style="background: #a3a3a340;"><td>${index + 1}</td><td class="queueTableRowData"><a href="${item[1]}">${item[0]}</a><div class="upNextLabel">Up Next</div><div id="btnQueueDown" class="btnQueueTable"><i class="bi bi-chevron-down"></i></div><div id="btnQueueUp" class="btnQueueTable"><i class="bi bi-chevron-up"></i></div><div id="btnQueueDelete" class="btnQueueTable"><i class="fa fa-times" aria-hidden="true"></i></div></td></tr>`);
+            $('.queue-table tr:last').after(`<tr style="background: #a3a3a340;"><td>${index + 1}</td><td class="queueTableRowData"><a href="${item[1]}">${item[0]}</a><div class="upNextLabel">Up Next</div><div id="btnQueueDown" class="btnQueueTable"><i class="bi bi-chevron-down"></i></div><div id="btnQueueUp" class="btnQueueTable"><i class="bi bi-chevron-up"></i></div><div id="btnQueueDelete" class="btnQueueTable"><i class="bi bi-x-lg"></i></div></td></tr>`);
         } else {
             $('.queue-table tr:last').after(`<tr><td>${index + 1}</td><td class="queueTableRowData"><a href="${item[1]}">${item[0]}</a><div id="btnQueueDown" class="btnQueueTable"><i class="bi bi-chevron-down"></i></div><div id="btnQueueUp" class="btnQueueTable"><i class="bi bi-chevron-up"></i></div><div id="btnQueueDelete" class="btnQueueTable"><i class="bi bi-x-lg"></i></div></td></tr>`);
         }

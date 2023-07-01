@@ -167,15 +167,21 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     margin-left: 10px;
 }
 #btnQueueClear:hover {
-    background-color: #762824;
+    background-color: #000000e0;
 }
 #btnQueueDown {
     margin-left: auto;
     background-color: #000000e0;
 }
+#btnQueueDown:hover {
+    background-color: #59555f;
+}
 #btnQueueUp {
     margin-left: 6px;
     background-color: #000000e0;
+}
+#btnQueueUp:hover {
+    background-color: #59555f;
 }
 .btnQueueTable img {
     width: 15px;
