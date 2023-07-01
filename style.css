@@ -120,8 +120,9 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     flex-direction: row;
     flex-wrap: nowrap;
     background-color: #121212;
-    height: 50px;
+    height: 75px;
     align-content: center;
+    padding: 3em;
     align-items: center;
     justify-content: center;
     border-bottom-right-radius: 10px;
