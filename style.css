@@ -171,14 +171,14 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
 }
 #btnQueueDown {
     margin-left: auto;
-    background-color: #000000e0;
+    background-color: #000000;
 }
 #btnQueueDown:hover {
     background-color: #59555f;
 }
 #btnQueueUp {
     margin-left: 6px;
-    background-color: #000000e0;
+    background-color: #000000;
 }
 #btnQueueUp:hover {
     background-color: #59555f;
@@ -200,12 +200,15 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     justify-content: center;
 }
 #btnQueueDelete {
-    background-color: #e33e3e;
+    background-color: #000000;
     margin-left: 6px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+#btnQueueDelete:hover {
+    background-color: #59555f;
 }
 .upNextLabel {
     background-color: #efff01;
@@ -261,3 +264,10 @@ th:first-child {
 .noscroll {
     overflow: hidden;
 }
+.ellipsis {
+    display: inline-block;
+    max-width: 200px; /* Set the maximum width for the span */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }

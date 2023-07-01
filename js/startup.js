@@ -65,6 +65,7 @@ const loadQueueModal = () => {
         $('#close-btn').click(() => closeQueueModal());
 }
 
+
 const addToQueue = (url, title) => {
     var myQueue = JSON.parse(localStorage.getItem('myQueue'));
 
@@ -87,15 +88,15 @@ const closeQueueModal = () => {
     $('.queue-table').html('<tbody><tr class="queue-table-headers"><th>Order</th><th>Name</th></tr></tbody>');
     $('body').toggleClass('noscroll');
 }
-
+<span class="badge bg-secondary">Up Next</span>
 const loadQueueItems = () => {
     var queue = JSON.parse(localStorage.getItem('myQueue'));
 
     queue.forEach((item, index) => {
         if (index == 0) {
-            $('.queue-table tr:last').after(`<tr style="background: #a3a3a340;"><td>${index + 1}</td><td class="queueTableRowData"><a href="${item[1]}">${item[0]}</a><div class="upNextLabel">Up Next</div><div id="btnQueueDown" class="btnQueueTable"><i class="bi bi-chevron-down"></i></div><div id="btnQueueUp" class="btnQueueTable"><i class="bi bi-chevron-up"></i></div><div id="btnQueueDelete" class="btnQueueTable"><i class="bi bi-x-lg"></i></div></td></tr>`);
+            $('.queue-table tr:last').after(`<tr style="background: #a3a3a340;"><td>${index + 1}</td><td class="queueTableRowData"><a class="text-truncate" href="${item[1]}">${item[0]}<span class="badge text-bg-warning">Warning</span></a><div class="upNextLabel">Up Next</div><div id="btnQueueDown" class="btnQueueTable"><i class="bi bi-chevron-down"></i></div><div id="btnQueueUp" class="btnQueueTable"><i class="bi bi-chevron-up"></i></div><div id="btnQueueDelete" class="btnQueueTable"><i class="bi bi-x-lg"></i></div></td></tr>`);
         } else {
-            $('.queue-table tr:last').after(`<tr><td>${index + 1}</td><td class="queueTableRowData"><a href="${item[1]}">${item[0]}</a><div id="btnQueueDown" class="btnQueueTable"><i class="bi bi-chevron-down"></i></div><div id="btnQueueUp" class="btnQueueTable"><i class="bi bi-chevron-up"></i></div><div id="btnQueueDelete" class="btnQueueTable"><i class="bi bi-x-lg"></i></div></td></tr>`);
+            $('.queue-table tr:last').after(`<tr><td>${index + 1}</td><td class="queueTableRowData"><a class="text-truncate" href="${item[1]}">${item[0]}</a><div id="btnQueueDown" class="btnQueueTable"><i class="bi bi-chevron-down"></i></div><div id="btnQueueUp" class="btnQueueTable"><i class="bi bi-chevron-up"></i></div><div id="btnQueueDelete" class="btnQueueTable"><i class="bi bi-x-lg"></i></div></td></tr>`);
         }
     });
 
