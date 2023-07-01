@@ -85,8 +85,7 @@ const shuffleQueue = () => {
 
     localStorage.setItem("myQueue", JSON.stringify(queue));
 
-    closeQueueModal();
-    loadQueueModal();
+    reloadQueueItems();
 }
 
 const addToQueue = (url, title) => {
