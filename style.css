@@ -109,7 +109,7 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     background-color: #171717;
     width: 100%;
     border-top: 1px #4141417d solid;
-    height: 389px;
+    height: 404px;
     overflow-y: scroll;
     display: table-column;
 }
@@ -163,12 +163,6 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
 .seQueue {
     border-top-left-radius: 3em !important;
     border-bottom-left-radius: 3em !important;
-}
-#btnQueueClear {
-    margin-left: 10px;
-}
-#btnQueueClear:hover {
-    background-color: #000000e0;
 }
 #btnQueueDown {
     margin-left: auto;
