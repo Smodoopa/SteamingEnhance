@@ -88,7 +88,7 @@ const closeQueueModal = () => {
     $('.queue-table').html('<tbody><tr class="queue-table-headers"><th>Order</th><th>Name</th></tr></tbody>');
     $('body').toggleClass('noscroll');
 }
-<span class="badge bg-secondary">Up Next</span>
+
 const loadQueueItems = () => {
     var queue = JSON.parse(localStorage.getItem('myQueue'));
 
