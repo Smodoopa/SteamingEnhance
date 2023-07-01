@@ -57,14 +57,37 @@ const loadQueue = () => {
 
 const loadQueueModal = () => {
         //Add Queue Modal to Site Nav Header
-        $('body').prepend('<div class="queue-modal"><div class="queue-modal-content"><div class="queue-details"><div class="server-header"><h3 class="header-text">My Queue</h3><div id="close-btn" class="server-header-btn"><i class="bi bi-x-lg"></i></div></div><table class="queue-table"><tbody><tr class="queue-table-headers"><th>Order</th><th>Name</th></tr></tbody></table><div class="queue-button-panel"><div id="btnFav" class="btn btn-primary"><i class="fa fa-star" aria-hidden="true"></i></div><div id="btnQueueClear" class="btn btn-primary"><i class="fa fa-trash" aria-hidden="true"></i></div><div id="btnShuffleQueue" class="btn btn-primary"><i class="fa fa-random" aria-hidden="true"></i></div><input class="quickAddInput" placeholder="Quick Add"><div class="btn btn-primary quickAddSubmit"><i class="fa fa-search" aria-hidden="true"></i></div></div></div></div></div>');
+        $('body').prepend('<div class="queue-modal"><div class="queue-modal-content"><div class="queue-details"><div class="server-header"><h3 class="header-text">My Queue</h3><div id="close-btn" class="server-header-btn"><i class="bi bi-x-lg"></i></div></div><table class="queue-table"><tbody><tr class="queue-table-headers"><th>Order</th><th>Name</th></tr></tbody></table><div class="queue-button-panel"><div id="btnQueueClear" class="btn btn-primary"><i class="bi bi-trash"></i></div><div id="btnShuffleQueue" class="btn btn-primary"><i class="bi bi-shuffle"></i></div><input class="quickAddInput" placeholder="Quick Add"><div class="btn btn-primary quickAddSubmit"><i class="fa fa-search" aria-hidden="true"></i></div></div></div></div></div>');
 
         $("#user > div").prepend('<div class="seQueue"><button data-toggle="dropdown" data-placeholder="false"><i class="bi bi-list-ul"></i> </button></div>');
 
         $('.seQueue').click(() => displayQueueModal());
         $('#close-btn').click(() => closeQueueModal());
+
+        $('#btnQueueClear').click(() => {
+            localStorage.setItem('myQueue', '[]');
+            closeQueueModal();
+            loadQueueModal();
+        });
+
+        $('#btnShuffleQueue').click(() => {
+            shuffleQueue();
+        });
 }
 
+const shuffleQueue = () => {
+    var queue = JSON.parse(localStorage.getItem('myQueue'));
+
+    for (let i = queue.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [queue[i], queue[j]] = [queue[j], queue[i]];
+    }
+
+    localStorage.setItem("myQueue", JSON.stringify(queue));
+
+    closeQueueModal();
+    loadQueueModal();
+}
 
 const addToQueue = (url, title) => {
     var myQueue = JSON.parse(localStorage.getItem('myQueue'));

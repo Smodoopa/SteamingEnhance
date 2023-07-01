@@ -127,10 +127,6 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-#btnFavAdd {
-    margin-left: auto;
-    background-color: #2f2f2f;
-}
 .btn-info {
     color: #fff;
     width: 50px;
@@ -164,8 +160,8 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     border-bottom-left-radius: 3em;
 }
 .seQueue {
-    border-top-left-radius: 3em;
-    border-bottom-left-radius: 3em;
+    border-top-left-radius: 3em !important;
+    border-bottom-left-radius: 3em !important;
 }
 #btnQueueClear {
     margin-left: 10px;
