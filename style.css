@@ -56,6 +56,10 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     align-content: center;
     width: 50em;
 }
+#queue-settings {
+    margin-left: 10px;
+    background-color: transparent;
+}
 .queue-details {
     justify-content: center;
     display: flex;
@@ -88,7 +92,6 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
 }
 .header-text {
     flex: 1 1 auto;
-    margin-left: 40px;
     margin-top: 10px;
 }
 .header-text-fav {
