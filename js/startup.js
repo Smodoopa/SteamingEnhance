@@ -1,5 +1,6 @@
 
 function startUp() {
+    // Init jquery
     $.fn.insertAt = function (index, element) {
         var lastIndex = this.children().size();
         if (index < 0) {
@@ -126,7 +127,6 @@ const addToQueue = (url, title) => {
 
 const displayQueueModal = () => {
     loadQueueItems();
-    console.log("Display queue modal.");
     $('.queue-modal').css('display', 'flex');
     $('body').toggleClass('noscroll');
 }

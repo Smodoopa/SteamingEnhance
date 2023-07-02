@@ -54,8 +54,7 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     flex-wrap: nowrap;
     display: flex;
     align-content: center;
-    width: 37em;
-    align-items: center;
+    width: 50em;
 }
 .queue-details {
     justify-content: center;
@@ -109,7 +108,7 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     background-color: #171717;
     width: 100%;
     border-top: 1px #4141417d solid;
-    height: 404px;
+    height: 50vh;
     overflow-y: scroll;
     display: table-column;
 }
@@ -163,6 +162,9 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
 .seQueue {
     border-top-left-radius: 3em !important;
     border-bottom-left-radius: 3em !important;
+}
+tbody {
+    color: #dddddd;
 }
 #btnQueueDown {
     margin-left: auto;
@@ -232,7 +234,7 @@ th {
     text-align: left;
     padding: 8px;
     text-shadow: black 0px 0px 10px;
-    width: 35em;
+    width: 53em;
 }
 td {
     text-align: left;
