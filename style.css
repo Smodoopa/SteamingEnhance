@@ -89,6 +89,7 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
 .header-text {
     flex: 1 1 auto;
     margin-left: 40px;
+    margin-top: 10px;
 }
 .header-text-fav {
     margin-left: 0 !important;
@@ -108,7 +109,7 @@ body > div.wrapper > main > div.watch > div.container.watch-page {
     background-color: #171717;
     width: 100%;
     border-top: 1px #4141417d solid;
-    height: 50vh;
+    height: 53vh;
     overflow-y: scroll;
     display: table-column;
 }
